@@ -15,7 +15,6 @@
 		</div>
 	</div>
 </div>
-
 <?php
 	require('website/views/templates/footer.php');
 ?>
