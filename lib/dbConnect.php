@@ -9,7 +9,7 @@ define('PATH_URL_IMG_PRODUCT', PATH_URL. '/public/upload/product/');
 $ketnoi['Server']['name'] = 'localhost';
 $ketnoi['Database']['dbname'] = 'medical-ecommerce';
 $ketnoi['Database']['username'] = 'root';
-$ketnoi['Database']['password'] = '1';
+$ketnoi['Database']['password'] = '';
 @mysql_connect(
     "{$ketnoi['Server']['name']}",
     "{$ketnoi['Database']['username']}",

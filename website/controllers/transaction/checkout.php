@@ -42,29 +42,31 @@
 			foreach ($_SESSION['cart'] as $item) {
 				$productId       = $item['id'];
 				$productQuantity = $item['quantity'];
-				$config = array(
+				$config1 = array(
 					'TransactionId' => $tranid,
 					'ProductId' => $productId,
 					'Quantity' => $productQuantity,
 				);
+				$oderid   =  save('order', $config1);
+				if ($oderid < 0) {
+					deleteOrder($tranid);
+					header('Location: index.php?controller=transaction');
+				}
 			}
 
 			$title = 'Giao dịch mua hàng thành công';
 			$content = 'bạn đã mua :'.$productQuantity.'sản phẩm';
 			$nTo = $customerName;
-			$mTo = 'chanhhiep.0201@gmail.com';
-			$diachi = 'chanhhiep.0201@gmail.com';
+			$mTo = $customerEmail;
+			$diachi = $customerEmail;
 			//test gui mail
 			$mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
 			if($mail==1)
 			echo 'mail của bạn đã được gửi đi hãy kiếm tra hộp thư đến để xem kết quả. ';
 			else echo 'Co loi!';
 
-			$oderid   =  save('order', $config);
-			if ($oderid < 0) {
-				deleteOrder($tranid);
-				header('Location: index.php?controller=transaction');
-			}
+			
+			
 			header('Location: index.php?controller=transaction&action=success');
 		}
 	}
