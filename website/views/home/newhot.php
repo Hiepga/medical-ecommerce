@@ -22,7 +22,8 @@
 				</div>
 			</div>
 			<div class="col-lg-3">
-				<iframe width="100%" height="315" src="https://www.youtube.com/embed/qGRU3sRbaYw?auto=1" frameborder="0" allowfullscreen></iframe>
+				<div class="fb-page" data-href="https://www.facebook.com/Herabiopharm0201/" data-tabs="timeline" data-width="292" data-height="320" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Herabiopharm0201/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Herabiopharm0201/">Good-medicine</a></blockquote></div>
+				<!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/qGRU3sRbaYw?auto=1" frameborder="0" allowfullscreen></iframe> -->
 			</div>
 		</div>
 	</div>
