@@ -118,3 +118,10 @@ function alias($str){
     $str = str_replace(' ', '-', $str);
     return $str;
 }
+
+function substring($string,$num){
+    if(strlen($string)<=$num) return $string;
+    $number=strpos($string,' ',$num);
+    $str=substr($string,0,$number)."....";
+    return $str;
+}

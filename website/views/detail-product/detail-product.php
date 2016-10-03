@@ -51,7 +51,7 @@
 									<?php echo $product['Detail']; ?>
 								</div>
 								<div id="comment" class="tab-pane fade" role="tabpanel">
-									<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+									<div class="fb-comments" data-href="https://www.facebook.com/Herabiopharm0201/" data-width="800" data-numposts="6"></div>
 								</div>
 							</div>
 						</div>

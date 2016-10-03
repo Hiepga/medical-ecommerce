@@ -21,7 +21,7 @@
 								<form action="" method="post">
 									<div class="row">
 										<div class="col-md-12">
-											<input type="text" id="username" class="form-control" value="" name="email" placeholder="Nhập mail đăng nhập...">
+											<input type="text" id="username" class="form-control" value="" name="username" placeholder="Nhập tên đăng nhập...">
 										</div>
 									</div>
 									<div class="row">

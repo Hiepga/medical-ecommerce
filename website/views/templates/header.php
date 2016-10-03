@@ -39,10 +39,10 @@
 								?>
 								</a>sản phẩm</span>
 							</div>
-							<div class="searchbar">
-								<input name="Keyword" type="text" value="Tìm kiếm" id="Keyword" class="searchbox">
-								<input id="btnSearch" type="image" src="public/images/Search.png" class="btn_search" name="btnSearch">
-							</div>
+							<form action="index.php?controller=search&amp;keyword=" method="get" onsubmit="return false;" class="searchbar">
+			                    <input type=search name='keyword' id='keyword' placeholder="Nhập tên sản phẩm" class="searchbox">
+			                    <input type="submit" value=" " onclick="window.location.href=this.form.action + this.form.keyword.value;" class="btn_search"/>
+			                </form>
 						</div>
 					</div>
 				</div>

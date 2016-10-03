@@ -1,7 +1,7 @@
 <?php
-    if (!isset($_SESSION['user'])) {
-        header('location: admin.php?controller=auth&action=login');
-    }
+     if (!isset($_COOKIE['user_admin']) && !isset($_SESSION['user_admin'])) {
+        header('Location: admin.php?controller=auth&action=login');
+     }
 
 ?>
 <div id="wrapper">
@@ -19,7 +19,15 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>ggggg<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>
+                    <?php
+                        if(isset($_COOKIE['user_admin'])) {
+                            echo $_COOKIE['user_admin'];
+                        } elseif(isset($_SESSION['user_admin'])) {
+                            echo $_SESSION['user_admin'];
+                        }
+                    ?>
+                <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
                         <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
@@ -32,7 +40,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        <a href="admin.php?controller=auth&amp;action=logout"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                     </li>
                 </ul>
             </li>

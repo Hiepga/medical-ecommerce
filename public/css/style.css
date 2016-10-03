@@ -95,6 +95,10 @@ th, td{ text-align: center !important;}
 
 .btn_search{
   float: left;
+  border: none;
+  background: url(../images/Search.png) no-repeat center top;
+  width: 92px;
+  height: 35px;
 }
 
 
