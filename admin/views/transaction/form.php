@@ -19,7 +19,7 @@
                     <tbody>
                         <?php
                             $i = 1;
-                            foreach ($order_detail as $order_detail) :
+                            foreach ($order_detail as $order_detail):
                         ?>
                         <tr>
                             <td class="hidden-xs"><?php echo $i; ?></td>
