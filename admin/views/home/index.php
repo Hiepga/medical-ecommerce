@@ -87,7 +87,6 @@
                                     <th>STT</th>
                                     <th>Ngày đặt hàng</th>
                                     <th>Khách hàng</th>
-                                    <th>Tổng tiền (USD)</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -99,7 +98,6 @@
                                     <td><?php echo $i; ?></td>
                                     <td><?php echo $order['Createtime']; ?></td>
                                     <td><?php echo $order['CustomerName']?></td>
-                                    <!-- <td><?php echo $order['Cart_total']; ?></td> -->
                                 </tr>
                             <?php
                                 $i++;

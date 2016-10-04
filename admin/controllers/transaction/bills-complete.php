@@ -5,8 +5,8 @@
 	);
 	$transaction         = get_all('transaction', $option_status);
 	$status              = array(
-				0   => 'Chưa xử lí' ,
-				1   => 'Đã xử lí',
-			);
+		0   => 'Chưa xử lí' ,
+		1   => 'Đã xử lí',
+	);
 	require('admin/views/transaction/index.php');
 ?>

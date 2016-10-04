@@ -27,13 +27,13 @@
 		                ?>
 	                        <tr class="odd gradeX">
 	                            <td><?php echo $i; ?></td>
-		                        <td><img class="img-responsive" width="70" src="public/upload/images/<?php echo $banner['Image1'] ?>"></td>
+		                        <td><img class="img-responsive" width="70" src="public/upload/images/<?php echo $banner['Images'] ?>"></td>
 		                        <td><?php echo $banner['Time_create']; ?></td>
 		                        
 	                            <td>
-	                                <a href="admin.php?controller=banner&amp;action=edit&amp;pid=<?php echo $banner['Id']; ?>"
+	                                <a href="admin.php?controller=banner&amp;action=edit&amp;bid=<?php echo $banner['Id']; ?>"
 	                                   class="text-danger"><i class="glyphicon glyphicon-edit"></i></a>
-	                                <a href="admin.php?controller=banner&amp;action=delete&amp;pid=<?php echo $banner['Id']; ?>"
+	                                <a href="admin.php?controller=banner&amp;action=delete&amp;bid=<?php echo $banner['Id']; ?>"
 	                                   class="text-danger deleteitem"><i class="glyphicon glyphicon-remove"></i></a>
 	                            </td>
 	                        </tr>
