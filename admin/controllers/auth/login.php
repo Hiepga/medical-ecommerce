@@ -1,4 +1,3 @@
-
 <?php
 		if (isset($_COOKIE['user_admin']) || isset($_SESSION['user_admin'])) {
 			header("Location: admin.php");

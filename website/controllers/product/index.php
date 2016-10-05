@@ -5,7 +5,11 @@
 		'order_by' => 'Id ASC',
 	);
 	$category  	= get_all('categories', $option); 
-
+// LOAD BANNER
+	$option_B 	= array(
+		'where'     => 'Status = 1',
+	);
+	$banner = get_all('banner', $option_B);
 
 // LOAD PRODUCT DIFFERENT
 	$option_P 	= array(
@@ -16,12 +20,6 @@
 	);
 	$product_slideVertical = get_all('product', $option_P);
 
-	$option_B 	= array(
-		'where'     => 'Status = 1',
-	);
-	$banner = get_all('banner', $option_B);
-
-	
 // LOAD PRODUCT
 	if (isset($_GET['page'])) $page = intval($_GET['page']);
 	else $page = 1;
@@ -38,5 +36,6 @@
 	$total                 = ceil($total_rows / $limit);
 	$product   	= get_all('product', $options);
 	$pagination = pagination($url, $page, $total);
+
 	require('website/views/product/index.php');
 ?>

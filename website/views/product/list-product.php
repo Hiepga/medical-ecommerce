@@ -21,7 +21,7 @@
 							</div>
 							<div class="infor_product">
 								<h5><?php echo $product['Name']; ?></h5>
-								<p><?php echo $product['Description']; ?></p>
+								<p><?php echo $product['Guide']; ?></p>
 							</div>
 						</div>
 						<div class="name_price">

@@ -94,10 +94,10 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#function"><i class="fa fa-fw fa-dashboard"></i> Quản lý Chức năng khác</a>
                 <ul id="function" class="collapse">
                     <li>
-                        <a href="list-admin.php">Quản lí menu</a>
+                        <a href="admin.php?controller=slideshow">Quản lí banner slide</a>
                     </li>
                     <li>
-                        <a href="info-admin.php">Quản lí banner slide</a>
+                        <a href="admin.php?controller=banner">Quản lí banner quảng cáo</a>
                     </li>
                 </ul>
             </li>
@@ -105,7 +105,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#admin"><i class="fa fa-fw fa-dashboard"></i> Quản lý admin</a>
                 <ul id="admin" class="collapse">
                     <li>
-                        <a href="list-admin.php">Danh sách admin</a>
+                        <a href="admin.php?controller=auth&amp;action=listadmin">Danh sách admin</a>
                     </li>
                     <li>
                         <a href="info-admin.php">Thông tin admin hiện tại</a>

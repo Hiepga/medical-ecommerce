@@ -3,7 +3,9 @@
 	require('website/views/templates/menu.php');
 ?>
 <div class="body">
-
+    <?php
+        require ('website/views/templates/banner.php');
+    ?>
     <div class="contact">
         <div class="container">
             <!---start-contact-->

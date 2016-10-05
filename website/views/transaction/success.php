@@ -4,9 +4,11 @@
 ?>
 
 <div class="body">
-	<div class="success" style="min-height: 800px;">
+	<div class="success" style="min-height: 400px;">
 		<div class="container">
-			<p>Bạn đã mua hàng thành công</p>
+			<div class="message_success">
+				<p>Bạn đã mua hàng thành công</p>
+			</div>
 		</div>
 	</div>
 </div>

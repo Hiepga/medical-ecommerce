@@ -4,8 +4,15 @@
 	} elseif (isset($_SESSION['user_login'])) {
 		$username = $_SESSION['user_login'];
 	} else {
-		header("Location: index.php");
+		$username = null;
 	}
+
+	// LOAD BANNER
+	$option_B 	= array(
+		'where'     => 'Status = 1',
+	);
+	$banner = get_all('banner', $option_B);
+	
 	$options = array(
 		"where" => "username='$username'"
 	);

@@ -1,6 +1,13 @@
 <?php
 	$title = 'Chi tiết sản phẩm';
 	if (isset($_GET['pid'])){
+
+// LOAD BANNER
+	$option_B 	= array(
+		'where'     => 'Status = 1',
+	);
+	$banner = get_all('banner', $option_B);
+	
 // Lấy 5 sản phẩm mới nhất
 		$option_P 	= array(
 			'order_by' => 'Id ASC',

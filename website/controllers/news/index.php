@@ -1,5 +1,12 @@
 <?php
 	$tittle = 'tin tức';
+
+// LOAD BANNER
+	$option_B 	= array(
+		'where'     => 'Status = 1',
+	);
+	$banner = get_all('banner', $option_B);
+	
 // LOAD PRODUCT DIFFERENT	
 	$option_P 	= array(
 		'order_by'  => 'Id ASC',
