@@ -27,6 +27,9 @@
 			$customerId = NULL;
 		}
 
+		// print_r($customerId);
+		// die();
+
 		$config = array(
 			'CustomerId'   => $customerId,
 			'CustomerName' => $customerName,
@@ -56,14 +59,20 @@
 
 			$title = 'Giao dịch mua hàng thành công';
 			$content = 'bạn đã mua :'.$productQuantity.'sản phẩm';
+
+			;
 			$nTo = $customerName;
-			$mTo = $customerEmail;
-			$diachi = $customerEmail;
+			$mTo = 'chanhhiep.0201@gmail.com';
+			$diachi = 'chanhhiep.0201@gmail.com';
 			//test gui mail
 			$mail = sendMail($title, $content, $nTo, $mTo,$diachicc='');
 			if($mail==1)
 			echo 'mail của bạn đã được gửi đi hãy kiếm tra hộp thư đến để xem kết quả. ';
 			else echo 'Co loi!';
+
+			if (isset($_SESSION['cart'])) {	
+				unset($_SESSION['cart']);
+			}
 
 			
 			

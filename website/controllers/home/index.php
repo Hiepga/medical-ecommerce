@@ -1,6 +1,5 @@
 <?php 
 	$title = 'Trang chủ';
-
 	$option     = array(
 		'order_by'  => 'Createdate DESC',
 		'limit'     => 5,

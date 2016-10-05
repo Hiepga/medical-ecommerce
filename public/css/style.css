@@ -387,7 +387,11 @@ th, td{ text-align: center !important;}
 .product .list_product{margin-top: 10px !important;}
 .product .list_product .detail_product{margin-top: 10px !important;}
 .product .list_product .detail_product .thump{ width: 100%;height: 190px; overflow: hidden; position: relative;}
-.product .list_product .detail_product .thump .images_product{background-color: #EBEBEB; padding: 5px;}
+.product .list_product .detail_product .thump .images_product{
+  background-color: #EBEBEB;
+  overflow: hidden;
+  height: 210px;
+}
 .product .list_product .detail_product .thump .infor_product{width: 100%; height: 100%; background: rgba(49, 125, 39, 0.9); color: #ffffff; padding: 10px; opacity: 0.8; position: absolute; bottom: -100%;}
 .product .list_product .detail_product .thump:hover .infor_product{
   bottom: 0%;

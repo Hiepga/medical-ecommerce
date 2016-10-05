@@ -5,13 +5,7 @@
 ?>
 <div class="body">
 	<?php
-		foreach ($banner as $banner):
-	?>
-	<div class="page-title" style="background: url('public/upload/images/<?php echo $banner['Images']; ?>')">
-		<h2>Sản phẩm</h2>
-	</div>
-	<?php
-		endforeach;
+		require ('website/views/templates/banner.php');
 	?>
 	<div class="product">
 		<div class="container">

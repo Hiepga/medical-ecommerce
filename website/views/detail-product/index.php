@@ -3,9 +3,9 @@
 	require('website/views/templates/menu.php');
 ?>
 <div class="body">
-	<div class="page-title">
-		<h2>Chi tiet sản phẩm</h2>
-	</div>
+	<?php
+		require ('website/views/templates/banner.php');
+	?>
 	<div class="block">
 		<div class="container">
 			<?php 

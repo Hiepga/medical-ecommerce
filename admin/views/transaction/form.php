@@ -79,7 +79,7 @@
 
                 <form id="order_form" method="post" action="admin.php?controller=transaction&amp;action=complete" role="form">
                     <div class="form-group">
-                        <input name="oid" type="hidden" value="<?php echo $transaction['Id']; ?>"/>
+                        <input name="id" type="hidden" value="<?php echo $transaction['Id']; ?>"/>
                         <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i> Xử lý xong</button>
                         <a href="admin.php?controller=transaction" class="btn btn-warning">Quay lại</a>
                     </div>

@@ -15,6 +15,12 @@
 	);
 	$product_slideVertical = get_all('product', $option_P);
 
+// LOAD BANNER
+	$option_B   = array(
+		'where'  => 'Status = 1'
+	);
+	$banner  =  get_all('banner', $option_B);
+
 // LOAD PRODUCT SEARCH
 		$keyword = $_GET['keyword'];
 		if (isset($_GET['page'])) $page = intval($_GET['page']);

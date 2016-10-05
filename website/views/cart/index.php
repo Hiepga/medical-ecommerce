@@ -3,9 +3,9 @@
 	require('website/views/templates/menu.php');
 ?>
 <div class="body">
-	<div class="page-title">
-		<h2><?php echo $title; ?></h2>
-	</div>
+	<?php
+		require ('website/views/templates/banner.php');
+	?>
 	<div class="product">
 		<div class="container">
 			<div class="row">

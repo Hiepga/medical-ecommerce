@@ -3,9 +3,9 @@
 	require('website/views/templates/menu.php');
 ?>
 <div class="body">
-	<div class="page-title">
-		<h2>Sản phẩm</h2>
-	</div>
+	<?php
+		require ('website/views/templates/banner.php');
+	?>
 	<div class="transaction">
 		<div class="container">
 			<form action="index.php?controller=transaction&amp;action=checkout" method="post">
