@@ -105,7 +105,7 @@
                 <a href="javascript:;" data-toggle="collapse" data-target="#admin"><i class="fa fa-fw fa-dashboard"></i> Quản lý admin</a>
                 <ul id="admin" class="collapse">
                     <li>
-                        <a href="list-admin.php">Danh sách admin</a>
+                        <a href="admin.php?controller=auth&amp;action=listadmin">Danh sách admin</a>
                     </li>
                     <li>
                         <a href="info-admin.php">Thông tin admin hiện tại</a>
