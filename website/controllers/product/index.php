@@ -6,6 +6,7 @@
 	);
 	$category  	= get_all('categories', $option); 
 
+
 // LOAD PRODUCT DIFFERENT
 	$option_P 	= array(
 		'order_by' => 'Id ASC',
@@ -15,6 +16,12 @@
 	);
 	$product_slideVertical = get_all('product', $option_P);
 
+	$option_B 	= array(
+		'where'     => 'Status = 1',
+	);
+	$banner = get_all('banner', $option_B);
+
+	
 // LOAD PRODUCT
 	if (isset($_GET['page'])) $page = intval($_GET['page']);
 	else $page = 1;

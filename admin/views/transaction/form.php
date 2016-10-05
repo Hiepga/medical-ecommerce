@@ -20,6 +20,7 @@
                         <?php
                             $i = 1;
                             foreach ($order_detail as $order_detail):
+                            $total = 0;
                         ?>
                         <tr>
                             <td class="hidden-xs"><?php echo $i; ?></td>
@@ -29,16 +30,21 @@
                             <td><?php echo $order_detail['Name']; ?> </td>
                             <td><?php echo $order_detail['Price'] ?></td>
                             <td width="5%"><?php echo $order_detail['Quantity']; ?></td>
+                            <?php
+                               
+                            ?>
                         </tr>
                         <?php
                             $i++;
+                            $subtotal = $order_detail['Price'] * $order_detail['Quantity'];
+                            $total += $subtotal;
                             endforeach;
                         ?>
                     </tbody>
                     <tfoot>
                     <tr>
                         <td colspan="6">
-                            <h4>Thành tiền : 55555 VNĐ</h4>
+                            <h4>Thành tiền : <?php echo $total; ?> VNĐ</h4>
                         </td>
                     </tr>
                     </tfoot>

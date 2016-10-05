@@ -379,7 +379,7 @@ th, td{ text-align: center !important;}
 
 
 /*----------BANNER PRODUCT----------*/
-.page-title {padding: 80px 0; margin-top: 10px; background: rgba(0, 0, 0, 0) url("../images/title-bg.jpg") no-repeat scroll center center / cover;text-align: center;}
+.page-title {padding: 80px 0; margin-top: 10px; background: rgba(0, 0, 0, 0)  no-repeat scroll center center / cover;text-align: center;}
 .page-title h2 {color: #fff;font-size: 50px;font-weight: 700;text-transform: uppercase;}
 
 /*------------PRODUCT------------*/

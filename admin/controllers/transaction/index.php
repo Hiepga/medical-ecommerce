@@ -1,7 +1,7 @@
 <?php
 	$title    = 'Đơn hàng';
 	$options  = array(
-		'order_by' => 'Id ASC',
+		'order_by' => 'Createtime DESC',
 	);
 	$transaction =  get_all('transaction', $options);
 	$status = array(

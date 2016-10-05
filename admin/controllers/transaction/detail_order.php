@@ -4,11 +4,6 @@
 	if (isset($_GET['oid'])) $oid = intval($_GET['oid']); else $oid = 0;
 	$transaction         = get_a_record('transaction', $oid);
 	$order_detail        = load_detail_order($oid);
-
-	// echo "<pre>";
-	// print_r($order_detail);
-	// echo "</pre>";
-	// die();
 	
 	require('admin/views/transaction/detail_order.php');
 ?>

@@ -1,11 +1,18 @@
 <?php
 	require('website/views/templates/header.php');
 	require('website/views/templates/menu.php');
+	
 ?>
 <div class="body">
-	<div class="page-title">
+	<?php
+		foreach ($banner as $banner):
+	?>
+	<div class="page-title" style="background: url('public/upload/images/<?php echo $banner['Images']; ?>')">
 		<h2>Sản phẩm</h2>
 	</div>
+	<?php
+		endforeach;
+	?>
 	<div class="product">
 		<div class="container">
 			<div class="row">
