@@ -47,16 +47,6 @@
         </div>
 
         <div class="form-group">
-            <label for="name" class="control-label">Thời gian tạo Sản phẩm</label>
-             <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" name="date" value="<?php echo $product ? $product['Createdate'] : '' ?>" />
-                <span class="input-group-addon">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                </span>
-            </div>
-        </div>
-
-        <div class="form-group">
             <label for="image1" class="control-label">Ảnh</label>
             <input name="image1" type="file" class="form-control" id="image" accept="image/*"/>
             <?php

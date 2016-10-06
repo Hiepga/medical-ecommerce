@@ -3,19 +3,25 @@
 	$options = array(
 		'order_by' => 'Id ASC',
 	);
+
 	// Hiển thị 5 đơn đặt hàng mới nhất
-	$option_order   = array(
-		'where'     => 'Status = 0',
+	require('admin/models/home.php');
+	$time = date('Y-m-d');
+	$order         = load_transaction_of($time);
+	$total_order   = count($order);
+
+	$option        = array(
+		'order_by'  => 'Id DESC',
+	);
+	$total_user    = get_total('product', $option);
+
+	$option        = array(
 		'order_by'  => 'Createtime DESC',
 		'limit'     => 5,
-		'offset'    => 0
 	);
-	$order        = get_all('transaction', $option_order);
+	$total_product = get_total('product', $option);
 
-	$total_order  = get_total('transaction');
 
-	// print_r($order);
-	// die();
 	require('admin/views/home/index.php');
 	
 ?>

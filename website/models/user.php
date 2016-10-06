@@ -9,19 +9,21 @@
 		public $address;
 		public $dateOfBirth;
 		public $gender;
+        public $Createtime;
 
 
         //hàm khởi tạo User
 		public function __construct($id, $username, $password, $email, $fullName, $phone, $address, $dateOfBirth, $gender) {
-			$this->id = $id;
-			$this->username = $username;
-			$this->password = $password;
-			$this->email = $email;
-			$this->fullName = $fullName;
-			$this->phone = $phone;
-			$this->address = $address;
+			$this->id          = $id;
+			$this->username    = $username;
+			$this->password    = $password;
+			$this->email       = $email;
+			$this->fullName    = $fullName;
+			$this->phone       = $phone;
+			$this->address     = $address;
 			$this->dateOfBirth = $dateOfBirth;
-			$this->gender = $gender;
+			$this->gender      = $gender;
+            $this->Createtime  = $Createtime;
 		}
 
         //hàm lấy tất cả thông tin user
@@ -103,26 +105,28 @@
             $date = str_replace('/', '-', $var);
             $user = array(
                     'Id' => $this->id,
-                    'username' => $this->username,
-                    'password' => md5($this->password),
-                    'email' => $this->email,
-                    'full_name' => $this->fullName,
-                    'phone' => $this->phone,
-                    'address' => $this->address,
+                    'username'      => $this->username,
+                    'password'      => md5($this->password),
+                    'email'         => $this->email,
+                    'full_name'     => $this->fullName,
+                    'phone'         => $this->phone,
+                    'address'       => $this->address,
                     'date_of_birth' => date('Y-m-d', strtotime($date)),
-                    'gender' => $this->gender
+                    'gender'        => $this->gender,
+                    'Createtime'    => $this->Createtime
                     );
             if ($this->id > 0) {
                 if ($this->checkPasswordUser() == false) {
                     $user = array(
-                    'Id' => $this->id,
-                    'username' => $this->username,
-                    'email' => $this->email,
-                    'full_name' => $this->fullName,
-                    'phone' => $this->phone,
-                    'address' => $this->address,
+                    'Id'            => $this->id,
+                    'username'      => $this->username,
+                    'email'         => $this->email,
+                    'full_name'     => $this->fullName,
+                    'phone'         => $this->phone,
+                    'address'       => $this->address,
                     'date_of_birth' => date('Y-m-d', strtotime($date)),
-                    'gender' => $this->gender
+                    'gender'        => $this->gender,
+                    'Createtime'    => $this->Createtime
                     );
                 }
             } else {

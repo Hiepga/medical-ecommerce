@@ -27,9 +27,6 @@
 			$customerId = NULL;
 		}
 
-		// print_r($customerId);
-		// die();
-
 		$config = array(
 			'CustomerId'   => $customerId,
 			'CustomerName' => $customerName,
@@ -73,9 +70,6 @@
 			if (isset($_SESSION['cart'])) {	
 				unset($_SESSION['cart']);
 			}
-
-			
-			
 			header('Location: index.php?controller=transaction&action=success');
 		}
 	}

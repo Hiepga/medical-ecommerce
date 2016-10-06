@@ -1,37 +1,38 @@
 <?php
 	if (!empty($_POST)) {
-		require_once 'admin/models/Slideshow.php';
-		if (isset($_POST['id'])) {
-			$id = $_POST['id'];
-			if ($id == 0) {
-				$message = "Thêm mới Slideshow thành công";
-			} else {
-				$message = "Cập nhật Slideshow thành công";
-			}
-			$title = $_POST['title'];
-			$caption = $_POST['caption'];
-			$imageName = 'image';
-			if (isset($_POST['status'])) {
-				$status = 1;
-			} else {
-				$status = 0;
-			}
-			$slideshow = new Slideshow($id, $imageName, $status, $title, $caption);
-			if ($slideshow->saveSlideshow() == true) {
-				$_SESSION['message'] = $message;
-				header('Location: admin.php?controller=slideshow');
-			} else {
-				$_SESSION['error'] = "Có lỗi xảy ra. Không thêm được Slideshow";
-			}
+		if (isset($_POST['status'])) {
+			$status = 1;
+		} else {
+			$status = 0;
 		}
-		
-	} else {
-		if (isset($_GET['id'])) $id = intval($_GET['id']); else $id = 0;
-		$slideshow = get_a_record('slideshow', $id);
+		$slideshow  =  array(
+			'Id'        =>  intval($_POST['id']),
+			'Tittle'    =>  escape($_POST['title']),
+			'Caption'   =>  escape($_POST['caption']),
+			'Status'    =>  $status
+		);	
+
+		$sid  = save('banner_slide', $slideshow);
+		$images_name1  = 'Images'.'-slideshow-'.$sid;
+		$config  =  array(
+			'name'         => $images_name1,
+			'upload_path'  => 'public/upload/images/',
+			'allowed_exts' => 'jpg|jpeg|png|gif'
+		);
+		$Images = upload('Images', $config);
+		if ($Images) {
+			$slideshow  = array(
+				'Id'        =>  $sid,
+				'Images'    =>  $Images
+			);
+			save('banner_slide', $slideshow);
+		}
+		header('location: admin.php?controller=slideshow');
 	}
+	if (isset($_GET['sid'])) $sid = intval($_GET['sid']); else $sid = 0;
 
-	$title   = ($id == 0)? 'Thêm sản phẩm' : 'Sửa sản phẩm' ;
-
+	$slideshow  = get_a_record('banner_slide', $sid);
+	$title      = 'Quản lý slideshow';
 	//load view
 	require('admin/views/slideshow/edit.php');
 ?>

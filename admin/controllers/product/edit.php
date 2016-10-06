@@ -5,7 +5,6 @@
 			'CategoryId'  => intval($_POST['category_id']),
 			'Name'        => escape($_POST['name']),
 			'Price'       => escape($_POST['price']),
-			// 'Createdate'  => escape($_POST['date']),
 			'Createdate'  => date('Y-m-d'),
 			'Used'       => escape($_POST['used']),
 			'Guide'       => escape($_POST['guide']),

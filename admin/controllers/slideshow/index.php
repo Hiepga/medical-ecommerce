@@ -1,9 +1,10 @@
 <?php
 	$title    = 'Quản lí Slideshow';
-	$url      = 'admin.php?controller=slideshow';
 	$options = array(
 	    'order_by' => 'Id ASC'
 	);
-	$slideshow  = get_all('slideshow', $options);
+	$slideshow  = get_all('banner_slide', $options);
+	// print_r($slideshow);
+	// die();
 	require('admin/views/slideshow/index.php');
 ?>

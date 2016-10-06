@@ -32,7 +32,7 @@
 		'limit'     => $limit,
 		'offset'    => $offset
 	);
-	$total_rows            = get_total('news', $options);
+	$total_rows            = get_total('product', $options);
 	$total                 = ceil($total_rows / $limit);
 	$product   	= get_all('product', $options);
 	$pagination = pagination($url, $page, $total);

@@ -3,7 +3,6 @@
 	require ('admin/views/templates/nav-menu.php');
 	
 ?>
-
 	<?php
 		if (isset($_SESSION['message'])) {
 			$message = $_SESSION['message'];
@@ -14,7 +13,6 @@
 		}
 	?>
 	
-
 	<div id="page-wrapper">
 	    <a href="admin.php?controller=slideshow&amp;action=edit" class="btn btn-primary pull-right"><i class="glyphicon glyphicon-plus"></i> Thêm mới</a>
 	    <div class="panel panel-default">
@@ -27,6 +25,7 @@
 	                    <thead>
 		                    <tr>
 		                        <th>STT</th>
+		                        <th>Tiêu đề</th>
 		                        <th>Ảnh</th>
 		                        <th>Trạng thái</th>
 		                        <th>Chức năng</th>
@@ -39,9 +38,10 @@
 		                ?>
 	                        <tr class="odd gradeX">
 	                            <td><?php echo $i; ?></td>
-		                        <td><img class="img-responsive" title="<?php echo $slideshow['image_name']; ?>" width="70" src="public/upload/slideshows/<?php echo $slideshow['image_name'] ?>"></td>
+	                            <td><?php echo $slideshow['Tittle']; ?></td>
+		                        <td><img class="img-responsive" title="<?php echo $slideshow['Images']; ?>" width="70" src="public/upload/images/<?php echo $slideshow['Images'] ?>"></td>
 		                        <td><?php
-		                         		if ($slideshow['status'] == 1) {
+		                         		if ($slideshow['Status'] == 1) {
 		                         			echo "Đã kích hoạt";
 		                         		} else {
 		                         			echo "Không kích hoạt";
@@ -49,28 +49,12 @@
 		                         	?>
 		                         </td>
 	                            <td>
-	                                <a href="admin.php?controller=slideshow&amp;action=edit&amp;id=<?php echo $slideshow['Id']; ?>"
+	                                <a href="admin.php?controller=slideshow&amp;action=edit&amp;sid=<?php echo $slideshow['Id']; ?>"
 	                                   class="text-danger"><i class="glyphicon glyphicon-edit"></i></a>
-	                                <a class="text-danger deleteitem" data-toggle="modal" data-target=".deleteModal-<?php echo $slideshow['Id'];  ?>"><i class="glyphicon glyphicon-remove"></i></a>
+	                                <a href="admin.php?controller=slideshow&amp;action=delete&amp;sid=<?php echo $slideshow['Id']; ?>"
+	                                   class="text-danger deleteitem"><i class="glyphicon glyphicon-remove"></i></a>
 	                            </td>
 	                        </tr>
-	                        <div class="deleteModal-<?php echo $slideshow['Id'];  ?> modal fade" role="dialog">
-	            				<div class="modal-dialog">
-	            					<div class="modal-content">
-	            						<div class="modal-header">
-	            							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	            							<h4 class="modal-title">Xóa?</h4>
-	            						</div>
-	            						<div class="modal-body">
-	            							<p>Bạn có chắc chắn muốn xóa Slideshow này?</p>
-	            						</div>
-	            						<div class="modal-footer">
-	            							<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
-	            							<a class="btn btn-danger" href="admin.php?controller=slideshow&amp;action=delete&amp;id=<?php echo $slideshow['Id']; ?>">Xóa</a>
-	            						</div>
-	            					</div>
-	            				</div>
-	            			</div>
 	                    <?php 
 	                    	$i++;
 	                    	endforeach; 

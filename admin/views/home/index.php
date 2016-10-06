@@ -9,15 +9,15 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-3">
-                            <i class="fa fa-comments fa-5x"></i>
+                            <i class="fa fa-user fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">26</div>
-                            <div>New Comments!</div>
+                            <div class="huge"><?php echo $total_user; ?></div>
+                            <div>Số người đăng kí!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="admin.php?controller=custommer">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -34,12 +34,12 @@
                             <i class="fa fa-tasks fa-5x"></i>
                         </div>
                         <div class="col-xs-9 text-right">
-                            <div class="huge">12</div>
-                            <div>New Tasks!</div>
+                            <div class="huge"><?php echo $total_product ?></div>
+                            <div>Sản phẩm!</div>
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="admin.php?controller=product">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -57,11 +57,11 @@
                         </div>
                         <div class="col-xs-9 text-right">
                             <div class="huge"><?php echo $total_order; ?></div>
-                            <div>New Orders!</div>
+                            <div>Đơn đặt hàng mới!</div>
                         </div>
                     </div>
                 </div>
-                <a href="admin.php?controller=order">
+                <a href="admin.php?controller=transaction">
                     <div class="panel-footer">
                         <span class="pull-left">View Details</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

@@ -11,7 +11,7 @@ function sendMail($title, $content, $nTo, $mTo,$diachicc=''){
 	$mail->SMTPAuth   = true;                  	// enable SMTP authentication
 	$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 	$mail->Host       = "smtp.gmail.com";      	
-	$mail->Port       = 465;      //587
+	$mail->Port       = 587;      //587
 	$mail->Username   = $mFrom;  // GMAIL username
 	$mail->Password   = $mPass;           	 // GMAIL password
 	$mail->SetFrom($mFrom, $nFrom);
