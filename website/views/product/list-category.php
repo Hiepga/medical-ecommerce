@@ -7,7 +7,7 @@
 			<?php
 				foreach ($category as $category):
 			?>
-			<li><a href="index.php?controller=product&amp;cid=<?php echo $category['Id'];  ?>"><?php echo $category['Name']; ?></a></li>
+			<li><a href="index.php?controller=category&amp;cid=<?php echo $category['Id'];  ?>"><?php echo $category['Name']; ?></a></li>
 			<?php 
 				endforeach;
 			?>

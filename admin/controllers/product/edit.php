@@ -10,6 +10,8 @@
 			'Guide'       => escape($_POST['guide']),
 			'Detail'      => str_replace("\r\n",'', $_POST['detail'])
 		);
+		print_r($product);
+		die();
 		$pid           = save('product', $product);
 		$images_name1  = 'images1'.'-'.$pid;
 		$config  = array(
