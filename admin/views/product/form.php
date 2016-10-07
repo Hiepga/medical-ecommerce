@@ -15,6 +15,8 @@
 
         <div class="form-group">
             <label for="category_id" class="control-label">Danh mục sản phẩm</label>
+            
+
             <select name="category_id" class="form-control" id="category_id">
                 <?php foreach ($categories as $category) {
                     $selected = '';
